@@ -1,0 +1,198 @@
+/* Configurações Globais (Exatamente iguais ao seu projeto original) */
+* {
+    box-sizing: border-box;
+    outline: 0;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #D0826B; /* Cor de fundo idêntica */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Principal - Ajustado para 80% para caber 3 colunas confortavelmente */
+.container {
+    background: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+    max-width: 80%; 
+    display: block;
+    top: 0px;
+    margin: auto;
+    padding: 25px;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding: 10px 10px 0 10px;
+    margin: 10px 10px 0 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+/* Grid configurada para exibir exatamente 3 colunas por linha */
+.parcerias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Estilo de cada Card de Parceiro */
+.card-parceiro {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Área que envolve a logo do parceiro */
+.parceiro-logo-area {
+    width: 100%;
+    height: 100px; /* Altura fixa para manter o alinhamento perfeito dos cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+}
+
+/* Imagem da logo do parceiro */
+.parceiro-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Impede que a foto fique esticada ou distorcida */
+}
+
+.card-parceiro h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.card-parceiro .descricao {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* Tag de benefício/desconto */
+.card-parceiro .beneficio {
+    background-color: #fceee9;
+    color: #D3836C;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px dashed #D3836C;
+}
+
+/* Área de copiar Cupom */
+.cupom-area {
+    display: flex;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    height: 40px;
+}
+
+.cupom-texto {
+    flex: 1;
+    background: #f9f9f9;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.btn-copiar {
+    border: none;
+    background: #D3836C;
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0 15px;
+    transition: background 0.2s;
+}
+
+.btn-copiar:hover {
+    background: #9b604f;
+}
+
+/* Link de acesso à loja */
+.btn-link {
+    display: block;
+    text-decoration: none;
+    background: #555;
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.btn-link:hover {
+    background: #333;
+}
+
+/* Logo da Nutricionista (Igual ao seu original) */
+.logo {
+    width: 30%;
+    display: block;
+    margin: 0px auto 0px auto;
+}
+
+/* Responsividade: Ajustes essenciais para a tela do celular do paciente */
+@media (max-width: 900px) {
+    .container {
+        max-width: 90%;
+        top: 0px;
+        padding: 15px;
+    }
+    
+    /* No celular, transforma as 3 colunas em 1 para não esmagar os cards */
+    .parcerias-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo {
+        width: 55%;
+        margin-top: 0px;
+    }
+}
+
+.logo-topo {
+    width: 15%;
+    display: block;
+    margin: 0px auto 0px auto;
+}
+
+@media (max-width: 900px) {
+    .logo-topo {
+        width: 35%;
+    }
+}
